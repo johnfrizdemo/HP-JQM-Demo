@@ -38,7 +38,7 @@ function cachePoints(hash, data) {
   });
 }
 
-function getPoints() {
+exports.getPoints = function(params, callback) {
   var response = {};
   var cache    = getCachedPoints();
 
@@ -66,5 +66,5 @@ function getPoints() {
       response = cache;
     }
   }
-  return response;
-}
+  return callback(null, response);
+};

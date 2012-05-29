@@ -21,9 +21,7 @@ function getCachedPoints(params,callback) {
     "act": "load",
     "key": "points"
   },function(err,res){
-    console.log("err", err);
-    console.log("res", res);
-    callback(err,res.value);
+    callback(err,res);
   });
   
 }
@@ -45,6 +43,7 @@ function cachePoints(hash, data) {
 function getPoints(params,callback) {
   var response = {};
   getCachedPoints({}, function(err, res) {
+    console.log('getCachedPoints :: err = ', err, ' :: res = ', res);
     if( res && res.value && res.value.length > 0 ) {
       // Parse the cached data
       var cache = JSON.parse(res.value);

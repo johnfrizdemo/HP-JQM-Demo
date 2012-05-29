@@ -47,9 +47,10 @@ function getPoints(params,callback) {
   getCachedPoints({}, function(err, res) {
     console.log('getCachedPoints :: err = ', err, ' :: res = ', res);
     if( res && res.value && res.value.length > 0 ) {
+      console.log('getPoints - cached response = ', res.value);
       // Parse the cached data
       var cache = JSON.parse(res.value);
-  
+
       if( params.hash && params.hash === cache.hash ) {
         // Client data is up to date
         response = {'hash':params.hash, 'cached':true};

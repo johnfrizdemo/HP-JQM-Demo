@@ -47,8 +47,8 @@ function getPoints(params,callback) {
   getCachedPoints({}, function(err, res) {
     var util=require("util");
     console.log('getCachedPoints :: err = ', err, ' :: res = ', util.inspect(res));
-    if( res && res.value ) {
-      console.log('getPoints - cached response = ', res.value);
+    if( res ) {
+      console.log('getPoints - cached response = ', res);
       // Parse the cached data
       var cache = JSON.parse(res.value);
 

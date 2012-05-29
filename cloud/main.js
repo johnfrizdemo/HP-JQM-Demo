@@ -21,7 +21,7 @@ function getCachedPoints(params,callback) {
     "act": "load",
     "key": "points"
   },function(err,res){
-    callback(err,res.val);
+    callback(err,res.value);
   });
   
 }
@@ -35,7 +35,7 @@ function cachePoints(hash, data) {
   $fh.cache({
     "act": "save",
     "key": "points",
-    "val": obj,
+    "value": obj,
     "expire": CACHE_TIME
   });
 }

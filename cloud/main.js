@@ -17,7 +17,7 @@ var MARKERS = {
 };
 
 function getCachedPoints(params,callback) {
-  var ret = $fh.cache({
+  $fh.cache({
     "act": "load",
     "key": "points"
   },function(err,res){

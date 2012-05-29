@@ -1,7 +1,7 @@
 /*
  * Maps
  */
-// Cache points for 10 seconds
+// Cache points for 30 seconds
 var CACHE_TIME = 30;
 var MARKERS = {
   locations: [
@@ -45,8 +45,7 @@ function cachePoints(hash, data) {
 function getPoints(params,callback) {
   var response = {};
   getCachedPoints({}, function(err, res) {
-    var util=require("util");
-    console.log('getCachedPoints :: err = ', err, ' :: res = ', util.inspect(res));
+    console.log('getCachedPoints :: err = ', err, ' :: res = ', res);
     if( res ) {
       console.log('getPoints - cached response = ', res);
       // Parse the cached data

@@ -57,10 +57,8 @@ var mapController = {
 				icon : 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=0|00FF00|000000'
 			}));
 
-		}, function() {
-			// We failed to get the users geolocation, fallback to geo ip
-			alert("$fh.geo failed");
-			alert(JSON.stringify(res.geoip));
+		}, function(msg, err) {
+			alert("$fh.geo failed - " + msg + " :: " + err);			
 		});
 	}
 };

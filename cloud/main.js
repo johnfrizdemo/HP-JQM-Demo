@@ -50,7 +50,7 @@ function getPoints(params,callback) {
     if( res ) {
       console.log('getPoints - cached response = ', res);
       // Parse the cached data
-      var cache = JSON.parse(res.value);
+      var cache = JSON.parse(res);
 
       if( params.hash && params.hash === cache.hash ) {
         // Client data is up to date

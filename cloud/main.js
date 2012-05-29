@@ -37,6 +37,8 @@ function cachePoints(hash, data) {
     "key": "points",
     "value": obj,
     "expire": CACHE_TIME
+  }, function(err, res) {
+    console.log('cachePoints :: err = ', err, ' :: res = ', res);
   });
 }
 

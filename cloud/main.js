@@ -35,7 +35,7 @@ function cachePoints(hash, data) {
   $fh.cache({
     "act": "save",
     "key": "points",
-    "value": obj,
+    "value": JSON.stringify(obj),
     "expire": CACHE_TIME
   }, function(err, res) {
     console.log('cachePoints :: err = ', err, ' :: res = ', res);

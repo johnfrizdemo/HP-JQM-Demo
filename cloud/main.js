@@ -45,6 +45,7 @@ function cachePoints(hash, data) {
 function getPoints(params,callback) {
   var response = {};
   getCachedPoints({}, function(err, res) {
+    var util=require("util");
     console.log('getCachedPoints :: err = ', err, ' :: res = ', util.inspect(res));
     if( res && res.value ) {
       console.log('getPoints - cached response = ', res.value);

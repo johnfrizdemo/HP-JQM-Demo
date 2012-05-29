@@ -59,7 +59,7 @@ function getPoints(params,callback) {
     else {
       var data = MARKERS;
       var crypto=require("crypto");
-      var md5=crypto.reateHash("md5");
+      var md5=crypto.createHash("md5");
       var hash=md5.update(JSON.stringify(data)).digest();
       // Cache the data
       cachePoints(hash, data);

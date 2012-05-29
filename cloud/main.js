@@ -21,6 +21,8 @@ function getCachedPoints(params,callback) {
     "act": "load",
     "key": "points"
   },function(err,res){
+    console.log("err", err);
+    console.log("res", res);
     callback(err,res.value);
   });
   

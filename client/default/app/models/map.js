@@ -21,10 +21,10 @@ var mapModel = {
 					timestamp : new Date().getTime()
 				}
 			}, function(res) {
-				that.data = res;
 				if(hash && hash === res.hash) {
 					console.log("Client data is at the latest version");
 				} else {
+          that.data = res;
 					$fh.data({
 						act : 'save',
 						key : 'points',

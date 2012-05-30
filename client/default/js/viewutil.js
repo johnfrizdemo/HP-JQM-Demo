@@ -11,7 +11,9 @@
  */
 var lastView = null;
 function changeView(viewId) {
-	$.mobile.changePage(getView(viewId),{ transition: "slide"});
+  var page = getView(viewId);
+  page.page();
+	$.mobile.changePage(page,{ transition: "slide"});
 }
 
 /**

@@ -2,7 +2,10 @@
 $(document).ready(function() {
   debugger;
 	importViews(function() {
-		changeView("home");
-		bindEvent();
+    bindEvent();
+    setTimeout(function() {
+      changeView("home");
+    }, 100);
+		
 	});
 });

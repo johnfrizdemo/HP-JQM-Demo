@@ -4,7 +4,7 @@ $(document).ready(function() {
     bindEvent();
     setTimeout(function() {
       console.log("change page");
-      changeView("home");    
+      changeView("googleMap");    
     }, 200);
 	});
 });

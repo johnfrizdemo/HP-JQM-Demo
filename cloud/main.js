@@ -6,11 +6,11 @@ var CACHE_TIME = 30;
 var MARKERS = {
   locations: [
     {
-      lat: '36.12332',
+      lat: '36.12242',
       lon: '-115.17065'
     },
     {
-      lat: '36.12352',
+      lat: '36.12442',
       lon: '-115.17085'
     }
   ]

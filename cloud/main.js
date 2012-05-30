@@ -43,7 +43,7 @@ function cachePoints(hash, data) {
 }
 
 function getPoints(params,callback) {
-  console.log("getPoints - params = ", params);
+  
   var response = {};
   getCachedPoints({}, function(err, res) {
     console.log('getCachedPoints :: err = ', err, ' :: res = ', res);
@@ -53,7 +53,7 @@ function getPoints(params,callback) {
       var cache = JSON.parse(res);
 
       if( params.hash && params.hash === cache.hash ) {
-        // Client data is up to date
+        console.log('Hash check matches - Client data is up to date');
         response = {'hash':params.hash, 'cached':true};
       } else {
         // Hash value from client missing or incorrect, return cached cloud data

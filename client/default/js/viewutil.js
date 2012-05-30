@@ -12,9 +12,10 @@
 var lastView = null;
 function changeView(viewId) {
   var page = getView(viewId);
-  console.log("changeView");
+  console.log("changeView - " + viewId);
   console.log(page);
   page.page();
+  console.log(page);
 	$.mobile.changePage(page,{ transition: "slide"});
 }
 

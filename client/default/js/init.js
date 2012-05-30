@@ -4,7 +4,7 @@ $(document).ready(function() {
     bindEvent();
     setTimeout(function() {
       changeView("home");
-    }, 100);
+    }, 1000);
 		
 	});
 });

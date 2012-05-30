@@ -9,7 +9,7 @@ var mapController = {
 				target : '#mapCanvas',
         lat : 36.12342, 
         lon : -115.17075,
-				zoom : 11
+				zoom : 6
 			}, function(map) {
 				that.map=map.map;
 				var map = that.map;

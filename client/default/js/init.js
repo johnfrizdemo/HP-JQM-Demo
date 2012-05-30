@@ -1,6 +1,5 @@
 //on document is loaded
-$(document).ready(function() {
-  debugger;
+$(document).ready(function() {  
 	importViews(function() {
     bindEvent();
     setTimeout(function() {
